@@ -1,4 +1,4 @@
-# 🌌 Proyecto Star Wars API — Archivo Galáctico
+#  Proyecto Star Wars API — Archivo Galáctico
 
 > **Desarrollado por:** Andressann  
 > **Carrera:** Ingeniería Informática  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📋 Descripción del Proyecto
+##  Descripción del Proyecto
 
 Este proyecto es una **base de datos galáctica interactiva** sobre el universo de Star Wars, construida como práctica de consumo de APIs REST usando JavaScript puro (sin frameworks). La interfaz fue diseñada con estética de **videojuego espacial / terminal holográfico**, con efectos visuales como scanlines, estrellas animadas y tipografía futurista.
 
@@ -14,7 +14,7 @@ El usuario puede explorar todos los personajes del universo Star Wars, ver sus d
 
 ---
 
-## 🛠️ Tecnologías y Herramientas
+##  Tecnologías y Herramientas
 
 | Tecnología | Uso |
 |---|---|
@@ -27,7 +27,7 @@ El usuario puede explorar todos los personajes del universo Star Wars, ver sus d
 
 ---
 
-## 🧠 Estructura del Código
+## Estructura del Código
 
 ```
 proyecto-star-wars-api/
@@ -39,7 +39,7 @@ proyecto-star-wars-api/
 
 ---
 
-## 📡 APIs utilizadas
+##  APIs utilizadas
 
 ### 1. SWAPI — The Star Wars API
 ```
@@ -83,13 +83,13 @@ const [rawChars] = await Promise.all([
 
 ---
 
-## 🔧 Funcionalidades implementadas
+## Funcionalidades implementadas
 
-### ✅ Carga de datos con feedback visual
+###  Carga de datos con feedback visual
 - Barra de progreso que se actualiza en tiempo real mientras se descargan las páginas
 - Mensaje de estado que indica qué se está cargando
 
-### ✅ Enriquecimiento de datos
+###  Enriquecimiento de datos
 Como SWAPI no trae descripción, era galáctica ni frase mítica, se creó un objeto `CHAR_EXTRA` con datos extra para ~60 personajes icónicos. Para el resto se genera información genérica automáticamente:
 
 ```javascript
@@ -104,19 +104,19 @@ const CHAR_EXTRA = {
 };
 ```
 
-### ✅ Búsqueda y filtros en tiempo real
+###  Búsqueda y filtros en tiempo real
 - Buscador por nombre, planeta, especie o era
 - Filtro por género
 - Filtro por era galáctica
 - Orden por nombre A-Z, altura o año de nacimiento
 
-### ✅ Render de tarjetas dinámico
+### Render de tarjetas dinámico
 Por cada personaje se crea un elemento `div` con `createElement` y se inserta en el DOM usando un `DocumentFragment` (más eficiente que modificar el DOM en cada iteración).
 
-### ✅ Modal de detalle
+###  Modal de detalle
 Al hacer clic en una tarjeta se abre un panel modal con todos los datos del personaje, su frase mítica resaltada en dorado, sus datos biométricos y la lista de películas donde aparece.
 
-### ✅ Imagen con fallback automático
+### Imagen con fallback automático
 Si la foto del personaje no existe en la Akabab API, se muestra un placeholder con las **iniciales del personaje** generadas automáticamente:
 
 ```javascript
@@ -127,7 +127,7 @@ function getInitials(name) {
 
 ---
 
-## 🎨 Decisiones de diseño
+##  Decisiones de diseño
 
 - **Paleta de colores:** cian neón (`#00e5ff`) sobre negro espacial (`#010a0f`), con detalles en dorado (`#ffd700`) para elementos importantes como las frases míticas.
 - **Tipografía:** `Orbitron` para títulos (futurista, geométrica) y `Share Tech Mono` para datos (estilo terminal).
@@ -136,7 +136,7 @@ function getInitials(name) {
 
 ---
 
-## 🚀 Cómo ejecutar el proyecto
+##  Cómo ejecutar el proyecto
 
 No necesita servidor ni instalación. Solo abre el archivo directamente en el navegador:
 
@@ -144,11 +144,11 @@ No necesita servidor ni instalación. Solo abre el archivo directamente en el na
 Doble clic en index.html → Se abre en el navegador
 ```
 
-> ⚠️ Requiere conexión a internet para consumir las APIs.
+>  Requiere conexión a internet para consumir las APIs.
 
 ---
 
-## 📚 Lo que aprendí con este proyecto
+##  Lo que aprendí con este proyecto
 
 - Consumo de APIs REST con `fetch` y `async/await`
 - Manejo de **promesas en paralelo** con `Promise.all`
@@ -159,7 +159,7 @@ Doble clic en index.html → Se abre en el navegador
 
 ---
 
-## 🔮 Mejoras futuras
+##  Mejoras futuras
 
 - [ ] Agregar página de naves espaciales y planetas (también disponibles en SWAPI)
 - [ ] Modo oscuro / modo "lado luminoso" vs "lado oscuro"
@@ -169,4 +169,4 @@ Doble clic en index.html → Se abre en el navegador
 
 ---
 
-*"Que la Fuerza... y el JavaScript... te acompañen."* 🌌
+*"Que la Fuerza... y el JavaScript... te acompañen."* 
