@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archivo Galáctico · Star Wars DB</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- FONDO ESTRELLAS -->
+  <div class="stars" id="stars"></div>
+  <div class="scanlines"></div>
+
+  <!-- CABECERA -->
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="imperial-crest">✦</div>
+        <div>
+          <h1 class="main-title">ARCHIVO GALÁCTICO</h1>
+          <p class="sub-title">STAR WARS DATABASE · CLASIFICACIÓN IMPERIAL</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="stat-item">
+          <span class="stat-label">REGISTROS</span>
+          <span class="stat-val" id="total-count">--</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">ESTADO</span>
+          <span class="stat-val blink-text" id="status-text">CONECTANDO</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">SECTOR</span>
+          <span class="stat-val">OUTER RIM</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTROLES -->
+  <section class="controls-bar">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input type="text" id="search-input" placeholder="BUSCAR INDIVIDUO EN LA GALAXIA..." autocomplete="off" />
+      <button id="clear-btn" class="clear-btn" title="Limpiar">✕</button>
+    </div>
+    <div class="filters-wrap">
+      <select id="filter-gender" class="holo-select">
+        <option value="">▼ GÉNERO: TODOS</option>
+        <option value="male">MASCULINO</option>
+        <option value="female">FEMENINO</option>
+        <option value="hermaphrodite">HERMAFRODITA</option>
+        <option value="none">NINGUNO (DROIDE)</option>
+        <option value="n/a">N/A</option>
+      </select>
+      <select id="filter-era" class="holo-select">
+        <option value="">▼ ERA: TODAS</option>
+        <option value="República">REPÚBLICA</option>
+        <option value="Imperio">IMPERIO</option>
+        <option value="Resistencia">NUEVA REPÚBLICA</option>
+        <option value="Antigua">ERA ANTIGUA</option>
+      </select>
+      <select id="sort-by" class="holo-select">
+        <option value="default">▼ ORDEN: DEFAULT</option>
+        <option value="name">NOMBRE A-Z</option>
+        <option value="height">ALTURA</option>
+        <option value="birth">AÑO NAC.</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- LOADING -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-box">
+      <div class="loading-ring"></div>
+      <p class="loading-text">ACCEDIENDO A ARCHIVOS IMPERIALES</p>
+      <div class="loading-bar-wrap"><div class="loading-bar" id="load-bar"></div></div>
+      <p class="loading-sub" id="load-info">Inicializando conexión...</p>
+    </div>
+  </div>
+
+  <!-- GRILLA DE PERSONAJES -->
+  <main>
+    <div class="results-info" id="results-info" style="display:none;">
+      <span id="showing-text">Mostrando 0 registros</span>
+    </div>
+    <div class="grid" id="characters-grid"></div>
+    <div class="no-results hidden" id="no-results">
+      <p>⚠ NINGÚN INDIVIDUO ENCONTRADO EN LA BASE DE DATOS</p>
+    </div>
+  </main>
+
+  <!-- MODAL DETALLE -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal-panel">
+      <button class="modal-close-btn" id="modal-close">✕ CERRAR ARCHIVO</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>SISTEMA DE ARCHIVO GALÁCTICO · ORDEN 66 INTELLIGENCE UNIT · AÑO 0 ABY</p>
+    <p>DATOS OBTENIDOS VÍA SWAPI · USO EXCLUSIVO IMPERIAL</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
